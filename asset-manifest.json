@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/sirius_questions/static/css/main.e4788d60.chunk.css",
+    "main.js": "/sirius_questions/static/js/main.9f6419d7.chunk.js",
+    "main.js.map": "/sirius_questions/static/js/main.9f6419d7.chunk.js.map",
+    "runtime-main.js": "/sirius_questions/static/js/runtime-main.a9ca9eb5.js",
+    "runtime-main.js.map": "/sirius_questions/static/js/runtime-main.a9ca9eb5.js.map",
+    "static/js/2.1b26d365.chunk.js": "/sirius_questions/static/js/2.1b26d365.chunk.js",
+    "static/js/2.1b26d365.chunk.js.map": "/sirius_questions/static/js/2.1b26d365.chunk.js.map",
+    "static/js/3.e84093ae.chunk.js": "/sirius_questions/static/js/3.e84093ae.chunk.js",
+    "static/js/3.e84093ae.chunk.js.map": "/sirius_questions/static/js/3.e84093ae.chunk.js.map",
+    "index.html": "/sirius_questions/index.html",
+    "static/css/main.e4788d60.chunk.css.map": "/sirius_questions/static/css/main.e4788d60.chunk.css.map",
+    "static/js/2.1b26d365.chunk.js.LICENSE.txt": "/sirius_questions/static/js/2.1b26d365.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/sirius_questions/static/media/Background.3febf529.png",
+    "static/media/icon-cognitive.0fdaf34d.svg": "/sirius_questions/static/media/icon-cognitive.0fdaf34d.svg",
+    "static/media/icon-service-4.4610d318.svg": "/sirius_questions/static/media/icon-service-4.4610d318.svg",
+    "static/media/icon-user.f88de1ee.svg": "/sirius_questions/static/media/icon-user.f88de1ee.svg",
+    "static/media/logo.6ce24c58.svg": "/sirius_questions/static/media/logo.6ce24c58.svg",
+    "static/media/logo.84c14d4c.svg": "/sirius_questions/static/media/logo.84c14d4c.svg",
+    "static/media/menu.de21b81a.svg": "/sirius_questions/static/media/menu.de21b81a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9ca9eb5.js",
+    "static/js/2.1b26d365.chunk.js",
+    "static/css/main.e4788d60.chunk.css",
+    "static/js/main.9f6419d7.chunk.js"
+  ]
+}
