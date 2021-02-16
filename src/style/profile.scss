@@ -1,0 +1,43 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 60px);
+  padding: 40px;
+
+  & .profile__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 20px;
+    background: #fff;
+  }
+
+  & .profile__user-name {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  & .exit__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    background: none;
+    border: 1px solid #98a9cd;
+    color: #98a9cd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+
+  & .exit__container:hover {
+    color: #fff;
+    background: #98a9cd;
+  }
+}

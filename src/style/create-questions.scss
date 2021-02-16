@@ -1,0 +1,28 @@
+.questions {
+
+  & .questions-input {
+    width: 80%;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #98a9cd;
+    padding: 5px 15px;
+  }
+
+  & .questions-button {
+    width: 220px;
+    background: none;
+    border: 1px solid #98a9cd;
+    color: #98a9cd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.5s;
+      color: #fff;
+      background: #98a9cd;
+    }
+  }
+
+}

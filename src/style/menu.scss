@@ -1,0 +1,99 @@
+.menu {
+  height: 100%;
+  width: 80px;
+  background: #460e87;
+  transition: 0.6s;
+
+  & .menu-title {
+    color: #a985c7;
+    display: none;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+
+  & .menu-icon__info {
+    color: #fff;
+    display: none;
+    white-space: nowrap;
+  }
+
+  & .menu-icon {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+
+    & path {
+      fill: #a985c7;
+    }
+  }
+
+  & .menu-site-bar,
+  & .menu-icon__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px dashed #8ca0c7;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .menu-icons__container {
+    height: calc(100% - 60px);
+
+    & .menu-icon__block {
+      border-bottom: none;
+
+      & .menu-icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        transition: 0.5s;
+        background: #360063;
+      }
+    }
+
+    & .menu-icon__block--active {
+      background: #360063;
+      position: relative;
+
+      & path {
+        fill: #fff;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+      }
+    }
+  }
+}
+
+
+.menu__active {
+  width: 350px;
+
+  & .menu-title {
+    display: block;
+  }
+
+  & .menu-icon__info {
+    display: block;
+  }
+
+  & .menu-icon__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}
