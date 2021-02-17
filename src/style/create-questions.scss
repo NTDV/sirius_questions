@@ -1,4 +1,23 @@
 .questions {
+  & .submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+    & .anon {
+
+      & label {
+        font-size: 13px;
+        margin-left: 5px;
+      }
+
+      & .questions-checkbox {
+        background: none;
+        border: none;
+      }
+    }
+  }
 
   & .questions-input {
     width: 80%;

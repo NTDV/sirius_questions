@@ -12,15 +12,18 @@ export default class CreateQuestions extends React.Component {
         }
     }
 
+
     addQuestion = () => {
         let usr = JSON.parse(sessionStorage.getItem('user'));
         let myHeaders = new Headers();
         myHeaders.append("Authorization", usr.base);
+        //myHeaders.append("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
         let requestOptions = {
             method: 'GET',
             headers: myHeaders,
             redirect: 'follow'
         };
+
         fetch(`http://devju.sirius-systems.ru/createq?question=${encodeURIComponent(this.state.questionValue)}&answer=${encodeURIComponent(this.state.answerValue)}&topic=${this.state.topicValue}`, requestOptions)
             .then(response => response.json())
             .then(result => console.log(result))
@@ -62,11 +65,11 @@ export default class CreateQuestions extends React.Component {
     render() {
         return (
             <div className='questions'>
-                <select className='questions-input' onChange={this.topicNameToId}>
+                <select className='questions-input' defaultValue='Прочее' onChange={this.topicNameToId}>
                     <option>Английский</option>
                     <option>Информатика</option>
                     <option>Математика</option>
-                    <option selected>Прочее</option>
+                    <option>Прочее</option>
                     <option>Физика</option>
                 </select>
                 <input
@@ -83,12 +86,20 @@ export default class CreateQuestions extends React.Component {
                     className='questions-input'
                     placeholder='Введите ответ загадки'
                 />
-                <input
-                    type="button"
-                    className='questions-button'
-                    value='Отправить'
-                    onClick={this.addQuestion}
-                />
+                <div className='submit'>
+                    <div className='anon'>
+                        <input type="checkbox"
+                               value={this.state.answerValue}
+                               onChange={this.changeAnswerValue}
+                               className='questions-checkbox'
+                               id='isAnon'/>
+                        <label htmlFor='isAnon'>Анонимный</label>
+                    </div>
+                    <input type="button"
+                           className='questions-button'
+                           value='Отправить'
+                           onClick={this.addQuestion}/>
+                </div>
             </div>
         )
     }

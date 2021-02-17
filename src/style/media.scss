@@ -1,4 +1,23 @@
 @media screen and (max-width: 991px) {
+  .questions-block {
+    & .questions-block__answer {
+      display: contents;
+
+      & input {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .questions {
+    & .submit {
+      display: contents;
+      & .anon {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
   .auth {
     & .auth-form {
       width: 100%;

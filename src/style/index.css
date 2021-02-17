@@ -356,6 +356,7 @@
 }
 .questions-block .questions-block__text {
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 .questions-block .questions-block__answer {
   display: flex;
@@ -388,6 +389,20 @@
   background: #98a9cd;
 }
 
+.questions .submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.questions .submit .anon label {
+  font-size: 13px;
+  margin-left: 5px;
+}
+.questions .submit .anon .questions-checkbox {
+  background: none;
+  border: none;
+}
 .questions .questions-input {
   width: 80%;
   margin-bottom: 20px;
@@ -452,6 +467,20 @@
 }
 
 @media screen and (max-width: 991px) {
+  .questions-block .questions-block__answer {
+    display: contents;
+  }
+  .questions-block .questions-block__answer input {
+    margin-bottom: 10px;
+  }
+
+  .questions .submit {
+    display: contents;
+  }
+  .questions .submit .anon {
+    margin-bottom: 15px;
+  }
+
   .auth .auth-form {
     width: 100%;
     height: 100%;
