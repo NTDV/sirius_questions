@@ -24,15 +24,19 @@ export default class CreateQuestions extends React.Component {
             redirect: 'follow'
         };
 
-        fetch(`http://devju.sirius-systems.ru/createq?question=${encodeURIComponent(this.state.questionValue)}&answer=${encodeURIComponent(this.state.answerValue)}&topic=${this.state.topicValue}`, requestOptions)
+        console.log(this.state.anonState);
+        console.log(`http://devju.sirius-systems.ru/createq?question=${encodeURIComponent(this.state.questionValue)}&answer=${encodeURIComponent(this.state.answerValue)}&topic=${this.state.topicValue}&${this.state.anonState ? 'anonymous=true' : ''}`);
+
+        fetch(`http://devju.sirius-systems.ru/createq?question=${encodeURIComponent(this.state.questionValue)}&answer=${encodeURIComponent(this.state.answerValue)}&topic=${this.state.topicValue}&${this.state.anonState ? 'anonymous=true' : ''}`, requestOptions)
             .then(response => response.json())
             .then(result => console.log(result))
             .catch(error => console.log(error));
 
         this.setState({
-            topicValue: '',
+            topicValue: '100510000304',
             questionValue: '',
             answerValue: '',
+            anonState: ''
         })
     }
 
@@ -62,6 +66,10 @@ export default class CreateQuestions extends React.Component {
         this.setState({answerValue: event.target.value});
     }
 
+    changeAnonState = (event) => {
+        this.setState({anonState: event.target.value === 'on'});
+    }
+
     render() {
         return (
             <div className='questions'>
@@ -89,8 +97,7 @@ export default class CreateQuestions extends React.Component {
                 <div className='submit'>
                     <div className='anon'>
                         <input type="checkbox"
-                               value={this.state.answerValue}
-                               onChange={this.changeAnswerValue}
+                               onChange={this.changeAnonState}
                                className='questions-checkbox'
                                id='isAnon'/>
                         <label htmlFor='isAnon'>Анонимный</label>

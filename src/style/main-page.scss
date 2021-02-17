@@ -8,3 +8,9 @@
     background-color: #eaebef;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .mobile__hidden {
+    display: none;
+  }
+}

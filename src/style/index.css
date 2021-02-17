@@ -107,8 +107,7 @@
   border-bottom: 1px dashed #8ca0c7;
 }
 .header .header-title {
-  font-size: 28px;
-  color: #4f4f4f;
+  height: 60px;
 }
 .header .header-info {
   display: flex;
@@ -119,6 +118,7 @@
 .header .header-info .exit {
   color: #460e87;
   border: none;
+  background: none;
 }
 .header .header-user {
   display: flex;
@@ -213,7 +213,7 @@
 }
 
 .menu__active {
-  width: 350px;
+  width: 300px;
 }
 .menu__active .menu-title {
   display: block;
@@ -224,7 +224,12 @@
 .menu__active .menu-icon__block {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 27px;
+}
+
+.main-page .menu-site-bar {
+  padding: 0 27px;
+  justify-content: space-between;
 }
 
 .main-page {
@@ -237,6 +242,11 @@
   background-color: #eaebef;
 }
 
+@media screen and (max-width: 991px) {
+  .mobile__hidden {
+    display: none;
+  }
+}
 .questions {
   display: flex;
   flex-direction: column;
@@ -314,14 +324,16 @@
 }
 
 .questions__container {
+  display: flex;
   width: 100%;
+  align-items: center;
   background: #fff;
   flex-direction: column;
   margin-top: 10px;
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 0;
   max-height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .questions__show-block {
@@ -338,7 +350,7 @@
 .questions-block {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   background-color: #fff;
   border-radius: 15px;
   padding: 20px;
@@ -356,7 +368,14 @@
 }
 .questions-block .questions-block__text {
   margin-bottom: 20px;
-  overflow-wrap: break-word;
+  max-width: 800px;
+  word-wrap: break-word;
+  padding-right: 100px;
+}
+@media screen and (max-width: 991px) {
+  .questions-block .questions-block__text {
+    padding-right: 0;
+  }
 }
 .questions-block .questions-block__answer {
   display: flex;
@@ -460,6 +479,11 @@
   cursor: pointer;
   text-decoration: none;
   transition: 0.4s;
+}
+@media screen and (max-width: 991px) {
+  .profile .exit__container {
+    width: 100%;
+  }
 }
 .profile .exit__container:hover {
   color: #fff;

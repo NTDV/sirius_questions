@@ -81,7 +81,7 @@
 
 
 .menu__active {
-  width: 350px;
+  width: 300px;
 
   & .menu-title {
     display: block;
@@ -94,6 +94,11 @@
   & .menu-icon__block {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 27px;
   }
+}
+
+.main-page .menu-site-bar {
+  padding: 0 27px;
+  justify-content: space-between;
 }

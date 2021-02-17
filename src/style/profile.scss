@@ -34,6 +34,10 @@
     cursor: pointer;
     text-decoration: none;
     transition: 0.4s;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+
   }
 
   & .exit__container:hover {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {ReactComponent as UserIcon} from '../assets/icon-user.svg';
+import {ReactComponent as Logo} from '../assets/logo.svg';
 import PropTypes from "prop-types";
 
 export default class Header extends React.Component {
@@ -16,10 +17,10 @@ export default class Header extends React.Component {
     render() {
         return(
             <header className='header'>
-                <span className='header-title'>ReQuiz</span>
+                <Logo className='header-title' style={{width: '150px'}}/>
                 <div className='header-user'>
                     <div className='header-info'>
-                        <span>Пользователь: {this.props.user.name}</span>
+                        <span><span className='mobile__hidden'>Пользователь:</span> {this.props.user.name}</span>
                         <button className='exit' onClick={this.LogOut}>Выйти</button>
                     </div>
                     <div className="header-icon__container"
