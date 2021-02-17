@@ -53,6 +53,7 @@
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  min-height: 66px;
 
     & .group-button {
       display: inline-block;

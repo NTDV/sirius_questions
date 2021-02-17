@@ -16,7 +16,7 @@ export default class Header extends React.Component {
     render() {
         return(
             <header className='header'>
-                <span className='header-title'>Сириус.Викторина</span>
+                <span className='header-title'>ReQuiz</span>
                 <div className='header-user'>
                     <div className='header-info'>
                         <span>Пользователь: {this.props.user.name}</span>

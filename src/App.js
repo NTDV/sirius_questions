@@ -55,7 +55,7 @@ export default class App extends React.Component {
             user: usr
           });
         })
-        .catch(error => console.log('error', error));
+        .catch(() => document.getElementById('auth_submit').style.pointerEvents = 'unset');
   }
 
   AddQuestion (user, item) {

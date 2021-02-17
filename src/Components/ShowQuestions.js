@@ -15,7 +15,18 @@ export default class ShowQuestions extends React.Component {
   }
 
   componentDidMount() {
-    this.changeTypeMenu(1);
+    this.doUpdate("");
+  }
+
+  componentDidUpdate(prevProp, prevState) {
+    if (this.state.questions.length !== prevState.questions.length) {
+      this.doUpdate("");
+    }
+  }
+
+  doUpdate(theme) {
+    this.sortedArray();
+    this.renderQuestions(theme);
   }
 
   changeTypeMenu = (action) => {
@@ -23,8 +34,7 @@ export default class ShowQuestions extends React.Component {
     let qs = this.state.questions;
     switch (action) {
       case 1:
-        this.sortedArray();
-        this.renderQuestions("");
+        this.doUpdate("");
         break;
       case 2:
         this.sortedArray();
@@ -129,22 +139,22 @@ export default class ShowQuestions extends React.Component {
           </div>
           <div className="questions__show-block">
             <div className="questions__menu">
-              <div className="group-button" onClick={() => this.renderQuestions("")}>
+              <div className="group-button" onClick={() => this.doUpdate("")}>
                 Все
               </div>
-              <div className="group-button" onClick={() => this.renderQuestions("Математика")}>
+              <div className="group-button" onClick={() => this.doUpdate("Математика")}>
                 Математика
               </div>
-              <div className="group-button" onClick={() => this.renderQuestions("Информатика")}>
+              <div className="group-button" onClick={() => this.doUpdate("Информатика")}>
                 Информатика
               </div>
-              <div className="group-button" onClick={() => this.renderQuestions("Физика")}>
+              <div className="group-button" onClick={() => this.doUpdate("Физика")}>
                 Физика
               </div>
-              <div className="group-button" onClick={() => this.renderQuestions("Английский")}>
+              <div className="group-button" onClick={() => this.doUpdate("Английский")}>
                 Английский язык
               </div>
-              <div className="group-button" onClick={() => this.renderQuestions("Прочее")}>
+              <div className="group-button" onClick={() => this.doUpdate("Прочее")}>
                 Прочее
               </div>
             </div>

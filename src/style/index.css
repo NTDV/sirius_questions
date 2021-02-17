@@ -288,6 +288,7 @@
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  min-height: 66px;
 }
 .questions__menu .group-button {
   display: inline-block;

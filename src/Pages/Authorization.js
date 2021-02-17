@@ -7,6 +7,7 @@ export default class Authorization extends React.Component {
         this.login = React.createRef();
         this.password = React.createRef();
         this.Auth = this.Auth.bind(this);
+        this.submitRef = React.createRef();
     }
 
     Auth() {
@@ -14,6 +15,7 @@ export default class Authorization extends React.Component {
             login: this.login.current.value,
             password: this.password.current.value
         });
+        this.submitRef.current.style.pointerEvents = 'none';
     }
 
     render() {
@@ -44,7 +46,9 @@ export default class Authorization extends React.Component {
                         <input type="button"
                                className='auth-form__button'
                                value="Авторизация"
-                               onClick={this.Auth}/>
+                               onClick={this.Auth}
+                               ref={this.submitRef}
+                               id='auth_submit'/>
                     </div>
                 </div>
             </div>
